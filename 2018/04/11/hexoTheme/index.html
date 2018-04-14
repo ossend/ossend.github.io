@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="为了让Hexo更加个性化，Hexo也提供了不同的主题。官网主题：https://hexo.io/themes以目前用的最多的Next为例">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows下使用Github页面搭建个人博客Hexo二（设置主题）">
+<meta property="og:url" content="http://git.junwei.xin/2018/04/11/hexoTheme/index.html">
+<meta property="og:site_name" content="notes">
+<meta property="og:description" content="为了让Hexo更加个性化，Hexo也提供了不同的主题。官网主题：https://hexo.io/themes以目前用的最多的Next为例">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-04-14T08:56:35.657Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Windows下使用Github页面搭建个人博客Hexo二（设置主题）">
+<meta name="twitter:description" content="为了让Hexo更加个性化，Hexo也提供了不同的主题。官网主题：https://hexo.io/themes以目前用的最多的Next为例">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://git.junwei.xin/2018/04/11/hexoTheme/"/>
+
+
+
+
+
+  <title>Windows下使用Github页面搭建个人博客Hexo二（设置主题） | notes</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://git.junwei.xin/2018/04/11/hexoTheme/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="junwei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/ossend.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Windows下使用Github页面搭建个人博客Hexo二（设置主题）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T15:49:43+08:00">
+                2018-04-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>为了让Hexo更加个性化，Hexo也提供了不同的主题。官网主题：<a href="https://hexo.io/themes" target="_blank" rel="noopener">https://hexo.io/themes</a><br>以目前用的最多的Next为例<br><a id="more"></a></p>
+<h3 id="1、下载主题至Hexo的theme文件夹"><a href="#1、下载主题至Hexo的theme文件夹" class="headerlink" title="1、下载主题至Hexo的theme文件夹"></a>1、下载主题至Hexo的theme文件夹</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<h3 id="2、启用主题。"><a href="#2、启用主题。" class="headerlink" title="2、启用主题。"></a>2、启用主题。</h3><p>在站点目录中（blog），打开配置文件<code>_config.yml</code>，修改<code>theme：next</code></p>
+<h3 id="3、打开本地调试服务"><a href="#3、打开本地调试服务" class="headerlink" title="3、打开本地调试服务"></a>3、打开本地调试服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h3 id="4、在浏览器预览"><a href="#4、在浏览器预览" class="headerlink" title="4、在浏览器预览"></a>4、在浏览器预览</h3><p><code>localhost:4000</code></p>
+<h3 id="5、主题设定"><a href="#5、主题设定" class="headerlink" title="5、主题设定"></a>5、主题设定</h3><p>在<code>next</code>主题目录下的<code>_config.yml</code>文件中将<code>scheme</code>设定为<code>Pisces</code></p>
+<h3 id="6、语言设定"><a href="#6、语言设定" class="headerlink" title="6、语言设定"></a>6、语言设定</h3><p>在站点根目录下修改配置文件<code>_cofig.yml</code>中的<code>language</code>为<code>zh-Hans</code>（简体中文）</p>
+<h3 id="7、修改菜单项"><a href="#7、修改菜单项" class="headerlink" title="7、修改菜单项"></a>7、修改菜单项</h3><p>在主题目录下修改配置文件<code>_cofig.yml</code>中的<code>menu</code>增添一个<code>something</code>（注：千万不要在这设置中文，后面的值那是查找文件的地方！若你的站点运行在子目录中，请将链接前缀的 / 去掉）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home</span><br><span class="line">  about: /about/ || user</span><br><span class="line">  <span class="comment">#tags: /tags/ || tags</span></span><br><span class="line">  <span class="comment">#categories: /categories/ || th</span></span><br><span class="line">  archives: /archives/ || archive</span><br><span class="line">  tags: /tags</span><br></pre></td></tr></table></figure></p>
+<p>这些配置都要与你主题目录下的languages文件中对应的yml文档里配置相关联。比如你在站点根目录中的配置文件设置language为zh-Hans，那么就要进入到主题目录下的languages文件中修改zh-Hans.yml，这样才能显示出菜单项新增的中文内容（以something为例子）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: 首页</span><br><span class="line">  archives: 归档</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签</span><br><span class="line">  about: 关于</span><br><span class="line">  search: 搜索</span><br><span class="line">  schedule: 日程表</span><br><span class="line">  sitemap: 站点地图</span><br><span class="line">  something: 有料</span><br></pre></td></tr></table></figure></p>
+<h3 id="8、设置菜单项图标"><a href="#8、设置菜单项图标" class="headerlink" title="8、设置菜单项图标"></a>8、设置菜单项图标</h3><p>对应的字段是<code>menu_icons</code>格式为<code>item name：icon name</code>其中<code>item name</code>与所配置的菜单名字对应<code>icon name</code>是<code>Font Awesome</code>图标的名字。而 <code>enable</code>可用于控制是否显示图标，你可以设置成<code>false</code>来去掉图标。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">menu_icons:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># Scheme Settings</span></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line">scheme: Pisces</span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="8、设置侧栏位置"><a href="#8、设置侧栏位置" class="headerlink" title="8、设置侧栏位置"></a>8、设置侧栏位置</h3><p>修改主题目录下<code>sidebar</code>的<code>position</code>值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  <span class="comment"># Sidebar Position, available value: left | right (only for Pisces | Gemini).</span></span><br><span class="line">  position: left</span><br><span class="line">  <span class="comment">#position: right</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Sidebar Display, available value (only for Muse | Mist):</span></span><br><span class="line">  <span class="comment">#  - post    expand on posts automatically. Default.</span></span><br><span class="line">  <span class="comment">#  - always  expand for all pages automatically</span></span><br><span class="line">  <span class="comment">#  - hide    expand only when click on the sidebar toggle icon.</span></span><br><span class="line">  <span class="comment">#  - remove  Totally remove sidebar including sidebar toggle.</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="9、设置头像"><a href="#9、设置头像" class="headerlink" title="9、设置头像"></a>9、设置头像</h3><p>在站点根目录下载配置文件中新增<code>avatar</code>值设置为头像的链接地址。地址可以是网络地址，也可以是本地地址（放置在<code>source/images/</code>目录下）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">avatar: /images/ossend.jpg</span><br></pre></td></tr></table></figure></p>
+<h3 id="10、设置文章代码主题"><a href="#10、设置文章代码主题" class="headerlink" title="10、设置文章代码主题"></a>10、设置文章代码主题</h3><p>在主题目录下修改配置文件<code>highlight_theme</code>默认值为<code>nomal</code>可以设置为<code>night</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">highlight_theme: night</span><br></pre></td></tr></table></figure></p>
+<h3 id="11、添加标签页面"><a href="#11、添加标签页面" class="headerlink" title="11、添加标签页面"></a>11、添加标签页面</h3><p>前面通过修改<code>next</code>主题下的<code>_config.yml</code>文件中的menu选项，可以在主页面的菜单栏添加标签选项，但是此时点击标签，跳转的页面会显示<code>page not found</code>此时我们要新建一个页面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure></p>
+<p>在新建的index.md文件中添加<code>type: &quot;tags&quot;</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-04-14 16:19:27</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<p>当要为某一篇文章添加标签，只需在blog/source/_post目录下的具体文章的tags中添加标签即可，如：</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/11/hexo/" rel="prev" title="Windows下使用Github页面搭建个人博客Hexo">
+                Windows下使用Github页面搭建个人博客Hexo <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/ossend.jpg"
+                alt="junwei" />
+            
+              <p class="site-author-name" itemprop="name">junwei</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ossend" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:i@junwei.work" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、下载主题至Hexo的theme文件夹"><span class="nav-number">1.</span> <span class="nav-text">1、下载主题至Hexo的theme文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、启用主题。"><span class="nav-number">2.</span> <span class="nav-text">2、启用主题。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、打开本地调试服务"><span class="nav-number">3.</span> <span class="nav-text">3、打开本地调试服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、在浏览器预览"><span class="nav-number">4.</span> <span class="nav-text">4、在浏览器预览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、主题设定"><span class="nav-number">5.</span> <span class="nav-text">5、主题设定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、语言设定"><span class="nav-number">6.</span> <span class="nav-text">6、语言设定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、修改菜单项"><span class="nav-number">7.</span> <span class="nav-text">7、修改菜单项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、设置菜单项图标"><span class="nav-number">8.</span> <span class="nav-text">8、设置菜单项图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、设置侧栏位置"><span class="nav-number">9.</span> <span class="nav-text">8、设置侧栏位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、设置头像"><span class="nav-number">10.</span> <span class="nav-text">9、设置头像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10、设置文章代码主题"><span class="nav-number">11.</span> <span class="nav-text">10、设置文章代码主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11、添加标签页面"><span class="nav-number">12.</span> <span class="nav-text">11、添加标签页面</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">junwei</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
