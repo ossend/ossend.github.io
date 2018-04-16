@@ -94,7 +94,7 @@
 <meta property="og:image" content="http://git.junwei.xin/images/wz/webdeveloping5.jpg">
 <meta property="og:image" content="http://git.junwei.xin/images/wz/webdeveloping6.jpg">
 <meta property="og:image" content="http://git.junwei.xin/images/wz/webdeveloping7.jpg">
-<meta property="og:updated_time" content="2018-04-16T02:53:42.286Z">
+<meta property="og:updated_time" content="2018-04-16T03:15:07.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网站业务架构演变过程">
 <meta name="twitter:description" content="有一天，我突发奇想创建了一个站点，基于LNMP架构，起初只有我自己访问，后来因为我点儿正，访问量越来越大，所以最终导致下面的架构演变。">
@@ -341,7 +341,7 @@
 <h3 id="6-避免单点引入负载均衡"><a href="#6-避免单点引入负载均衡" class="headerlink" title="6.避免单点引入负载均衡"></a>6.避免单点引入负载均衡</h3><p>两台WEB服务器因为有一台比较老，所以在高峰期时，终究是没有能扛住而挂掉。结果影响了一半的用户访问不到网站了。经过此次事故，我不得不修改架构，尽量避免单点，于是在WEB前端设置了负载均衡器，并且做了高可用。<br><img src="/images/wz/webdeveloping5.jpg" alt=""><br>在这里我拿nginx做了负载均衡器，并没有使用lvs，因为我觉得nginx更容易操作，更好控制。为了节省成本，我并没有单独把mysql-proxy摘出来作为独立服务器，因为那样的话，也得为它考虑单点问题。在这个架构中，其实还有一个缺陷，就是NFS服务端也是有风险的，更加保险的做法是单独搞一台服务器做NFS服务。</p>
 <h3 id="7-继续扩充"><a href="#7-继续扩充" class="headerlink" title="7.继续扩充"></a>7.继续扩充</h3><p>uv上升到100w，两台WEB服务器明显不够用了，而瓶颈并不在mysql上。所以，只增加WEB，同时把NFS服务器单独摘出来，并做一个备用NFS服务器。<br><img src="/images/wz/webdeveloping6.jpg" alt=""></p>
 <h3 id="8-引入NoSQL"><a href="#8-引入NoSQL" class="headerlink" title="8.引入NoSQL"></a>8.引入NoSQL</h3><p>uv近1000w，三台WEB服务器也早已不够，增加到5台，而MySQL服务器压力逐渐变大，针对mysql的慢查询，发现压力主要体现在个别sql语句上，该优化的已经优化到极致，对于这几个查询，其实是可以使用NoSQL的。于是，我找懂php开发的朋友帮我修改了程序，把一些访问量大的数据存储到redis，从而减少了对MySQL服务器的压力。 而Redis为了防止单点也做了主从。<br><img src="/images/wz/webdeveloping7.jpg" alt=""></p>
-<h3 id="9-mysql架构演变"><a href="#9-mysql架构演变" class="headerlink" title="9.mysql架构演变"></a>9.mysql架构演变</h3>
+<h3 id="9-mysql架构演变"><a href="#9-mysql架构演变" class="headerlink" title="9.mysql架构演变"></a>9.<a href="/2018/04/16/mysqldeveloping">mysql架构演变</a></h3>
       
     </div>
     
@@ -382,6 +382,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/16/mysqldeveloping/" rel="prev" title="Mysql架构由小变大的演变过程">
+                Mysql架构由小变大的演变过程 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -462,7 +466,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -475,7 +479,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
