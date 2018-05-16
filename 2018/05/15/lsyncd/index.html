@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="实验环境 源主机 T801 操作系统：CentOS6.9 IP地址：192.168.2.81 镜像主机T802 操作系统：CentOS6.9IP地址：192.168.2.82   安装Lsyncd先要添加epel源12wget -P /etc/yum.repos.d/ http://mirrors.aliyun.com/repo/epel-6.repoyum install -y lsyncd 在">
+<meta name="description" content="实验环境 源主机 T801 操作系统：CentOS6.9 IP地址：192.168.2.81 镜像主机T802 操作系统：CentOS6.9IP地址：192.168.2.82   安装Lsyncd先要添加epel源12wget -P /etc/yum.repos.d/ http://mirrors.aliyun.com/repo/epel-6.repoyum install -y lsyncd">
 <meta name="keywords" content="Lsyncd,backup,备份">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Lsyncd建立实时同步的镜像主机实验">
 <meta property="og:url" content="http://git.junwei.xin/2018/05/15/lsyncd/index.html">
 <meta property="og:site_name" content="Notes">
-<meta property="og:description" content="实验环境 源主机 T801 操作系统：CentOS6.9 IP地址：192.168.2.81 镜像主机T802 操作系统：CentOS6.9IP地址：192.168.2.82   安装Lsyncd先要添加epel源12wget -P /etc/yum.repos.d/ http://mirrors.aliyun.com/repo/epel-6.repoyum install -y lsyncd 在">
+<meta property="og:description" content="实验环境 源主机 T801 操作系统：CentOS6.9 IP地址：192.168.2.81 镜像主机T802 操作系统：CentOS6.9IP地址：192.168.2.82   安装Lsyncd先要添加epel源12wget -P /etc/yum.repos.d/ http://mirrors.aliyun.com/repo/epel-6.repoyum install -y lsyncd">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-16T07:57:06.829Z">
+<meta property="og:updated_time" content="2018-05-16T07:58:14.091Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lsyncd建立实时同步的镜像主机实验">
-<meta name="twitter:description" content="实验环境 源主机 T801 操作系统：CentOS6.9 IP地址：192.168.2.81 镜像主机T802 操作系统：CentOS6.9IP地址：192.168.2.82   安装Lsyncd先要添加epel源12wget -P /etc/yum.repos.d/ http://mirrors.aliyun.com/repo/epel-6.repoyum install -y lsyncd 在">
+<meta name="twitter:description" content="实验环境 源主机 T801 操作系统：CentOS6.9 IP地址：192.168.2.81 镜像主机T802 操作系统：CentOS6.9IP地址：192.168.2.82   安装Lsyncd先要添加epel源12wget -P /etc/yum.repos.d/ http://mirrors.aliyun.com/repo/epel-6.repoyum install -y lsyncd">
 
 
 
@@ -325,6 +325,7 @@
 </blockquote>
 <hr>
 <h3 id="安装Lsyncd先要添加epel源"><a href="#安装Lsyncd先要添加epel源" class="headerlink" title="安装Lsyncd先要添加epel源"></a>安装Lsyncd先要添加epel源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -P /etc/yum.repos.d/ http://mirrors.aliyun.com/repo/epel-6.repo</span><br><span class="line">yum install -y lsyncd</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="在源主机创建密钥并copy至镜像主机实现免密登陆"><a href="#在源主机创建密钥并copy至镜像主机实现免密登陆" class="headerlink" title="在源主机创建密钥并copy至镜像主机实现免密登陆"></a>在源主机创建密钥并copy至镜像主机实现免密登陆</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br><span class="line">ssh-copy-id root@192.168.2.82</span><br></pre></td></tr></table></figure>
 <h3 id="设置配置文件"><a href="#设置配置文件" class="headerlink" title="设置配置文件"></a>设置配置文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/lsyncd.conf</span><br></pre></td></tr></table></figure>
 <p>在<code>lsyncd.conf</code>中写入如下配置</p>
