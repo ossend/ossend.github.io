@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="实验环境 源主机 T801 操作系统：CentOS6.9 IP地址：192.168.2.81 镜像主机T802 操作系统：CentOS6.9IP地址：192.168.2.82">
+<meta name="description" content="Lysncd即Live Syncing Daemon，它是开源的数据实时同步工具(后台进程)，基于inotify和rsync。 Lsyncd会密切监测本地服务器上的参照目录，当发现目录下有文件或目录变更后，立刻通知远程服务器，并通过rsync 或rsync+ssh方式实现文件同步。这样做的好处就是，你可以利用Lsyncd搭建一个VPS同步镜像，应用场景例如CDN镜像、网站数据备份、网站搬家等等。">
 <meta name="keywords" content="Lsyncd,backup,备份">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Lsyncd建立实时同步的镜像主机实验">
 <meta property="og:url" content="http://git.junwei.xin/2018/05/15/lsyncd/index.html">
 <meta property="og:site_name" content="Notes">
-<meta property="og:description" content="实验环境 源主机 T801 操作系统：CentOS6.9 IP地址：192.168.2.81 镜像主机T802 操作系统：CentOS6.9IP地址：192.168.2.82">
+<meta property="og:description" content="Lysncd即Live Syncing Daemon，它是开源的数据实时同步工具(后台进程)，基于inotify和rsync。 Lsyncd会密切监测本地服务器上的参照目录，当发现目录下有文件或目录变更后，立刻通知远程服务器，并通过rsync 或rsync+ssh方式实现文件同步。这样做的好处就是，你可以利用Lsyncd搭建一个VPS同步镜像，应用场景例如CDN镜像、网站数据备份、网站搬家等等。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-16T08:07:33.290Z">
+<meta property="og:updated_time" content="2018-05-16T08:16:58.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lsyncd建立实时同步的镜像主机实验">
-<meta name="twitter:description" content="实验环境 源主机 T801 操作系统：CentOS6.9 IP地址：192.168.2.81 镜像主机T802 操作系统：CentOS6.9IP地址：192.168.2.82">
+<meta name="twitter:description" content="Lysncd即Live Syncing Daemon，它是开源的数据实时同步工具(后台进程)，基于inotify和rsync。 Lsyncd会密切监测本地服务器上的参照目录，当发现目录下有文件或目录变更后，立刻通知远程服务器，并通过rsync 或rsync+ssh方式实现文件同步。这样做的好处就是，你可以利用Lsyncd搭建一个VPS同步镜像，应用场景例如CDN镜像、网站数据备份、网站搬家等等。">
 
 
 
@@ -320,7 +320,9 @@
       
 
       
-        <h3 id="实验环境"><a href="#实验环境" class="headerlink" title="实验环境"></a>实验环境</h3><blockquote>
+        <p>Lysncd即Live Syncing Daemon，它是开源的数据实时同步工具(后台进程)，基于inotify和rsync。</p>
+<p>Lsyncd会密切监测本地服务器上的参照目录，当发现目录下有文件或目录变更后，立刻通知远程服务器，并通过rsync 或rsync+ssh方式实现文件同步。这样做的好处就是，你可以利用Lsyncd搭建一个VPS同步镜像，应用场景例如CDN镜像、网站数据备份、网站搬家等等。</p>
+<h3 id="实验环境"><a href="#实验环境" class="headerlink" title="实验环境"></a>实验环境</h3><blockquote>
 <p>源主机 T801<br> 操作系统：CentOS6.9<br> IP地址：192.168.2.81<br> 镜像主机T802<br> 操作系统：CentOS6.9<br>IP地址：192.168.2.82</p>
 </blockquote>
 <a id="more"></a>
