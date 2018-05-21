@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Notes">
 <meta property="og:description" content="LNMP代表的就是：Linux系统下Nginx+MySQL+PHP这种网站服务器架构。Linux是一类Unix计算机操作系统的统称，是目前最流行的免费操作系统。代表版本有：debian、centos、ubuntu、fedora、gentoo等。Nginx是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP代理服务器。Mysql是一个小型关系型数据库管理系统。 PHP是一种">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-20T05:45:38.888Z">
+<meta property="og:updated_time" content="2018-05-21T07:23:19.750Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS6搭建LNMP环境">
 <meta name="twitter:description" content="LNMP代表的就是：Linux系统下Nginx+MySQL+PHP这种网站服务器架构。Linux是一类Unix计算机操作系统的统称，是目前最流行的免费操作系统。代表版本有：debian、centos、ubuntu、fedora、gentoo等。Nginx是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP代理服务器。Mysql是一个小型关系型数据库管理系统。 PHP是一种">
@@ -343,7 +343,7 @@
 <p>解压</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/src</span><br><span class="line">for i in *.tar.gz ; do tar zxvf $i; done</span><br></pre></td></tr></table></figure>
 <p>安装cmake</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd cmake-2.8.10.2</span><br><span class="line">./bootstrap</span><br><span class="line">gmake &amp;amp;&amp;amp; gmake install</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd cmake-2.8.10.2</span><br><span class="line">./bootstrap</span><br><span class="line">gmake &amp;&amp; gmake install</span><br></pre></td></tr></table></figure>
 <p>创建mysql安装目录、组、账号，安装mysql</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">groupadd mysql ; useradd -g mysql -s /sbin/nologin mysql</span><br><span class="line">mkdir -p /data/mysql ; chown -R mysql:mysql /data/mysql</span><br><span class="line">mkdir -p /usr/local/mysql ; chown -R mysql:mysql /usr/local/mysql</span><br><span class="line">cd ../mysql-5.6.30</span><br></pre></td></tr></table></figure>
 <p>开始编译</p>
