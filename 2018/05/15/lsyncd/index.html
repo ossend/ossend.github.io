@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Notes">
 <meta property="og:description" content="Lysncd即Live Syncing Daemon，它是开源的数据实时同步工具(后台进程)，基于inotify和rsync。 Lsyncd会密切监测本地服务器上的参照目录，当发现目录下有文件或目录变更后，立刻通知远程服务器，并通过rsync 或rsync+ssh方式实现文件同步。这样做的好处就是，你可以利用Lsyncd搭建一个VPS同步镜像，应用场景例如CDN镜像、网站数据备份、网站搬家等等。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-27T07:35:13.394Z">
+<meta property="og:updated_time" content="2018-05-27T07:38:10.041Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lsyncd建立实时同步的镜像主机实验">
 <meta name="twitter:description" content="Lysncd即Live Syncing Daemon，它是开源的数据实时同步工具(后台进程)，基于inotify和rsync。 Lsyncd会密切监测本地服务器上的参照目录，当发现目录下有文件或目录变更后，立刻通知远程服务器，并通过rsync 或rsync+ssh方式实现文件同步。这样做的好处就是，你可以利用Lsyncd搭建一个VPS同步镜像，应用场景例如CDN镜像、网站数据备份、网站搬家等等。">
@@ -336,7 +336,7 @@
 <h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service lsyncd start</span><br></pre></td></tr></table></figure>
 <h3 id="源主机创建文件测试"><a href="#源主机创建文件测试" class="headerlink" title="源主机创建文件测试"></a>源主机创建文件测试</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">touch /data/www/&#123;a,b,c,d,e&#125;</span><br><span class="line">ll /data/www/</span><br></pre></td></tr></table></figure>
 <h3 id="镜像主机查看"><a href="#镜像主机查看" class="headerlink" title="镜像主机查看"></a>镜像主机查看</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll /data/www/</span><br></pre></td></tr></table></figure>
-<p>附：rsync拷贝命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rsync -avzP -e ssh root@118.89.29.90:/data/www/* /data/www/</span><br><span class="line">##快速拷贝远程服务器文件</span><br></pre></td></tr></table></figure></p>
+<p>附：rsync拷贝命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rsync -avzP -e ssh root@118.89.29.29:/data/www/* /data/www/</span><br><span class="line">##快速拷贝远程服务器文件</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
