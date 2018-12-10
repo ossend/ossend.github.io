@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Notes">
 <meta property="og:description" content="为了让Hexo更加个性化，Hexo也提供了不同的主题。官网主题：https://hexo.io/themes以目前用的最多的Next为例">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-16T02:52:05.028Z">
+<meta property="og:updated_time" content="2018-12-10T15:16:01.159Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows下使用Github页面搭建个人博客Hexo二（设置主题）">
 <meta name="twitter:description" content="为了让Hexo更加个性化，Hexo也提供了不同的主题。官网主题：https://hexo.io/themes以目前用的最多的Next为例">
@@ -335,7 +335,10 @@
 <h3 id="11-设置文章代码主题"><a href="#11-设置文章代码主题" class="headerlink" title="11.设置文章代码主题"></a>11.设置文章代码主题</h3><p>在主题目录下修改配置文件<code>highlight_theme</code>默认值为<code>nomal</code>可以设置为<code>night</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">highlight_theme: night</span><br></pre></td></tr></table></figure></p>
 <h3 id="12-添加标签页面"><a href="#12-添加标签页面" class="headerlink" title="12.添加标签页面"></a>12.添加标签页面</h3><p>前面通过修改<code>next</code>主题下的<code>_config.yml</code>文件中的menu选项，可以在主页面的菜单栏添加标签选项，但是此时点击标签，跳转的页面会显示<code>page not found</code>此时我们要新建一个页面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure></p>
 <p>在新建的index.md文件中添加<code>type: &quot;tags&quot;</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-04-14 16:19:27</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
-<p>当要为某一篇文章添加标签，只需在blog/source/_post目录下的具体文章的tags中添加标签即可，如：</p>
+<p>当要为某一篇文章添加标签，只需在blog/source/_post目录下的具体文章的tags中添加标签即可</p>
+<p>注：CNAME文件在下次 hexo deploy的时候就消失了，需要重新创建，这样就很繁琐<br>方法一：每次 hexo d 之后，就去 GitHub 仓库根目录新建 CNAME文件<br>方法二：在 hexo g 之后， hexo d 之前，把CNAME文件复制到 “\public\” 目录下面，里面写入你要绑定的域名。<br>方法三（推荐）：将需要上传至github的内容放在source文件夹，例如CNAME、favicon.ico、images等，这样在 hexo d 之后就不会被删除了。<br>方法四：通过安装插件实现永久保留<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-cname --save</span><br></pre></td></tr></table></figure></p>
+<p>之后在<code>_config.yml</code>中添加一条<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Plugins:</span><br><span class="line">- hexo-generator-cname</span><br></pre></td></tr></table></figure></p>
+<p>需要注意的是：如果是在github上建立的CNAME文件，需要先clone到本地，然后安装插件，在deploy上去即可。CNAME只允许一个域名地址。<br>之前每一次hexo  d -g 都会出现访问不了网站，需要手动在github page的setting里重新设置一下，下面就是解决方案。<br>修改 <code>_config.yml</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">url: http://www.hostname.com</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
