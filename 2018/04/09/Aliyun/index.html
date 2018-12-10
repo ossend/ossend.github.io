@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="阿里云,CentOS,云主机," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Notes">
-<meta property="og:url" content="http://www.junwei.xin/index.html">
+<meta name="description" content="系统的优化优化之前，首先查看版本信息12cat /etc/redhat-releaseCentOS release 6.9 (Final) 查看内核版本12uname -aLinux iZwz98akt9dh26btcaud2zZ 2.6.32-696.10.1.el6.x86_64 #1 SMP Tue Aug 22 18:51:35 UTC 2017 x86_64 x86_64 x86_64">
+<meta name="keywords" content="阿里云,CentOS,云主机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="购买一台阿里云云主机（CentOS）后">
+<meta property="og:url" content="http://www.junwei.xin/2018/04/09/Aliyun/index.html">
 <meta property="og:site_name" content="Notes">
+<meta property="og:description" content="系统的优化优化之前，首先查看版本信息12cat /etc/redhat-releaseCentOS release 6.9 (Final) 查看内核版本12uname -aLinux iZwz98akt9dh26btcaud2zZ 2.6.32-696.10.1.el6.x86_64 #1 SMP Tue Aug 22 18:51:35 UTC 2017 x86_64 x86_64 x86_64">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-10T15:36:48.355Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Notes">
+<meta name="twitter:title" content="购买一台阿里云云主机（CentOS）后">
+<meta name="twitter:description" content="系统的优化优化之前，首先查看版本信息12cat /etc/redhat-releaseCentOS release 6.9 (Final) 查看内核版本12uname -aLinux iZwz98akt9dh26btcaud2zZ 2.6.32-696.10.1.el6.x86_64 #1 SMP Tue Aug 22 18:51:35 UTC 2017 x86_64 x86_64 x86_64">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://www.junwei.xin/"/>
+  <link rel="canonical" href="http://www.junwei.xin/2018/04/09/Aliyun/"/>
 
 
 
 
 
-  <title>Notes</title>
+  <title>购买一台阿里云云主机（CentOS）后 | Notes</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,887 +238,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.junwei.xin/2018/05/27/zd/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="junwei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/ossend.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/27/zd/" itemprop="url">Linux几种中断信号的区别</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-27T13:30:00+08:00">
-                2018-05-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><code>HUP</code>有两种解释.</p>
-<blockquote>
-<p>1,他被许多守护进程理解为一个重新设置的请求.如果一个进程不用重新启动就能重新读取它的配置文件并调整自给以适应变化的话,那么HUP通常来触发这种行为.<br>2.HUP信号有时候又终端驱动程序生成,试图来”清除”(“终止”)跟某个特定终端相连的那些进程.例如:某个终端会话结束时,或者当调制解调器被挂断时,shell后台不接受HUP的信号的影响.有的的用户可以使用nohup来模仿这种行为.</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/27/zd/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.junwei.xin/2018/05/20/lnmp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="junwei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/ossend.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/20/lnmp/" itemprop="url">CentOS6搭建LNMP环境</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-20T13:30:00+08:00">
-                2018-05-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>LNMP代表的就是：Linux系统下Nginx+MySQL+PHP这种网站服务器架构。<br>Linux是一类Unix计算机操作系统的统称，是目前最流行的免费操作系统。代表版本有：debian、centos、ubuntu、fedora、gentoo等。<br>Nginx是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP代理服务器。<br>Mysql是一个小型关系型数据库管理系统。 PHP是一种在服务器端执行的嵌入HTML文档的脚本语言。<br>这四种软件均为免费开源软件，组合到一起，成为一个免费、高效、扩展性强的网站服务系统。</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/20/lnmp/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.junwei.xin/2018/05/15/lsyncd/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="junwei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/ossend.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/15/lsyncd/" itemprop="url">Lsyncd建立实时同步的镜像主机实验</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-15T15:49:00+08:00">
-                2018-05-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Lysncd即Live Syncing Daemon，它是开源的数据实时同步工具(后台进程)，基于inotify和rsync。</p>
-<p>Lsyncd会密切监测本地服务器上的参照目录，当发现目录下有文件或目录变更后，立刻通知远程服务器，并通过rsync 或rsync+ssh方式实现文件同步。这样做的好处就是，你可以利用Lsyncd搭建一个VPS同步镜像，应用场景例如CDN镜像、网站数据备份、网站搬家等等。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/15/lsyncd/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.junwei.xin/2018/04/16/mysqldeveloping/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="junwei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/ossend.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/16/mysqldeveloping/" itemprop="url">Mysql架构由小变大的演变过程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-16T10:01:29+08:00">
-                2018-04-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>假设一个网站（discuz）从最开始访问量很小做到日pv千万，我们来推测一下它的mysql服务器架构演变过程。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/16/mysqldeveloping/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.junwei.xin/2018/04/16/webdeveloping/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="junwei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/ossend.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/16/webdeveloping/" itemprop="url">网站业务架构演变过程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-16T10:00:29+08:00">
-                2018-04-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>有一天，我突发奇想创建了一个站点，基于LNMP架构，起初只有我自己访问，后来因为我点儿正，访问量越来越大，所以最终导致下面的架构演变。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/16/webdeveloping/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.junwei.xin/2018/04/11/hexoTheme/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="junwei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/ossend.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/11/hexoTheme/" itemprop="url">Windows下使用Github页面搭建个人博客Hexo二（设置主题）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T15:49:43+08:00">
-                2018-04-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>为了让Hexo更加个性化，Hexo也提供了不同的主题。官网主题：<a href="https://hexo.io/themes" target="_blank" rel="noopener">https://hexo.io/themes</a><br>以目前用的最多的Next为例<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/11/hexoTheme/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.junwei.xin/2018/04/11/hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="junwei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/ossend.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/11/hexo/" itemprop="url">Windows下使用Github页面搭建个人博客Hexo</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T15:49:00+08:00">
-                2018-04-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="1-安装Node-js和配置好Node-js环境"><a href="#1-安装Node-js和配置好Node-js环境" class="headerlink" title="1.安装Node.js和配置好Node.js环境"></a>1.安装Node.js和配置好Node.js环境</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator&gt;node -v</span><br><span class="line">v8.11.1</span><br><span class="line">C:\Users\Administrator&gt;npm -v</span><br><span class="line">5.6.0</span><br></pre></td></tr></table></figure>
-<h3 id="2-安装Git和配置好Git环境，安装成功的象征就是在电脑上任何位置鼠标右键能够出现如下两个选择"><a href="#2-安装Git和配置好Git环境，安装成功的象征就是在电脑上任何位置鼠标右键能够出现如下两个选择" class="headerlink" title="2.安装Git和配置好Git环境，安装成功的象征就是在电脑上任何位置鼠标右键能够出现如下两个选择"></a>2.安装Git和配置好Git环境，安装成功的象征就是在电脑上任何位置鼠标右键能够出现如下两个选择</h3><p><img src="/images/wz/git.png" alt=""></p>
-<p>注意：一般出于安全考虑，只有在Git Bash Here中才能进行Git的相关操作。如果需要在cmd命令行里调用Git，那么就要配置电脑的环境变量Path，或者在安装的时候选择use Git from the Windows Command Prompt。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/11/hexo/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
 
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -1144,9 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/09/Aliyun/" itemprop="url">购买一台阿里云云主机（CentOS）后</a></h1>
+          <h1 class="post-title" itemprop="name headline">购买一台阿里云云主机（CentOS）后</h1>
         
 
         <div class="post-meta">
@@ -1196,9 +320,7 @@
       
 
       
-        
-          
-            <h3 id="系统的优化"><a href="#系统的优化" class="headerlink" title="系统的优化"></a>系统的优化</h3><h5 id="优化之前，首先查看版本信息"><a href="#优化之前，首先查看版本信息" class="headerlink" title="优化之前，首先查看版本信息"></a>优化之前，首先查看版本信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/redhat-release</span><br><span class="line">CentOS release 6.9 (Final)</span><br></pre></td></tr></table></figure>
+        <h3 id="系统的优化"><a href="#系统的优化" class="headerlink" title="系统的优化"></a>系统的优化</h3><h5 id="优化之前，首先查看版本信息"><a href="#优化之前，首先查看版本信息" class="headerlink" title="优化之前，首先查看版本信息"></a>优化之前，首先查看版本信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/redhat-release</span><br><span class="line">CentOS release 6.9 (Final)</span><br></pre></td></tr></table></figure>
 <h5 id="查看内核版本"><a href="#查看内核版本" class="headerlink" title="查看内核版本"></a>查看内核版本</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">uname -a</span><br><span class="line">Linux iZwz98akt9dh26btcaud2zZ 2.6.32-696.10.1.el6.x86_64 #1 SMP Tue Aug 22 18:51:35 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux</span><br></pre></td></tr></table></figure>
 <h3 id="基础优化与安全重点小结"><a href="#基础优化与安全重点小结" class="headerlink" title="基础优化与安全重点小结"></a>基础优化与安全重点小结</h3><pre><code>1 不用root登录管理系统，而以普通用户登录通过sudo授权管理
 2 更改默认的远程连接SSH服务端口，禁止root用户远程连接，甚至要更改SSH服务只监听内网IP
@@ -1237,8 +359,6 @@
 <h3 id="11-锁定关键文件-如-passwd、-etc-shadow-、-etc-group-、-etc-gshadow、-etc-inittab-处理以上内容后把chattr、lsattr、改名为root，转移走，这样就安全多了。"><a href="#11-锁定关键文件-如-passwd、-etc-shadow-、-etc-group-、-etc-gshadow、-etc-inittab-处理以上内容后把chattr、lsattr、改名为root，转移走，这样就安全多了。" class="headerlink" title="11.锁定关键文件,如: passwd、/etc/shadow/、/etc/group/、/etc/gshadow、/etc/inittab,处理以上内容后把chattr、lsattr、改名为root，转移走，这样就安全多了。"></a>11.锁定关键文件,如: passwd、/etc/shadow/、/etc/group/、/etc/gshadow、/etc/inittab,处理以上内容后把chattr、lsattr、改名为root，转移走，这样就安全多了。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chattr +a /etc/passwd /etc/shadow /etc/group /etc/gshadow /etc/inittab</span><br><span class="line">mv /usr/bin/chattr ~/.pki/root</span><br><span class="line">mv /usr/bin/lsattr ~/.pki/toor</span><br></pre></td></tr></table></figure>
 <h3 id="12-清空-etc-issue-etcissue-net-去除系统及内核版本登录前的屏幕显示"><a href="#12-清空-etc-issue-etcissue-net-去除系统及内核版本登录前的屏幕显示" class="headerlink" title="12.清空/etc/issue /etcissue.net,去除系统及内核版本登录前的屏幕显示"></a>12.清空/etc/issue /etcissue.net,去除系统及内核版本登录前的屏幕显示</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &gt; /etc/issue </span><br><span class="line">echo &gt; /etc/issue.net</span><br></pre></td></tr></table></figure>
 <h3 id="13-禁止Linux系统被ping"><a href="#13-禁止Linux系统被ping" class="headerlink" title="13.禁止Linux系统被ping"></a>13.禁止Linux系统被ping</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 禁止ping</span><br><span class="line">echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all</span><br><span class="line"># 允许ping</span><br><span class="line"># echo 0 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all</span><br></pre></td></tr></table></figure>
-          
-        
       
     </div>
     
@@ -1253,14 +373,40 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/阿里云/" rel="tag"># 阿里云</a>
+          
+            <a href="/tags/CentOS/" rel="tag"># CentOS</a>
+          
+            <a href="/tags/云主机/" rel="tag"># 云主机</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/11/hexo/" rel="prev" title="Windows下使用Github页面搭建个人博客Hexo">
+                Windows下使用Github页面搭建个人博客Hexo <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -1270,10 +416,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1281,6 +428,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1301,8 +452,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1373,6 +533,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#系统的优化"><span class="nav-text">系统的优化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优化之前，首先查看版本信息"><span class="nav-text">优化之前，首先查看版本信息</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看内核版本"><span class="nav-text">查看内核版本</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基础优化与安全重点小结"><span class="nav-text">基础优化与安全重点小结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-禁用root用户登陆管理系统"><span class="nav-text">1.禁用root用户登陆管理系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加用户设置密码"><span class="nav-text">添加用户设置密码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-修改ssh端口"><span class="nav-text">2.修改ssh端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-设置服务器时间同步"><span class="nav-text">3.设置服务器时间同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-配置yum更新源并增加epel源"><span class="nav-text">4.配置yum更新源并增加epel源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-关闭selinux"><span class="nav-text">5.关闭selinux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-定时清理日志缓存文件，清理日志脚本delOldLogs-sh"><span class="nav-text">6.定时清理日志缓存文件，清理日志脚本delOldLogs.sh:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-加大文件描述"><span class="nav-text">7.加大文件描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-精简并保留必要的软件启动（如cron、network、sshd、rsyslog、sysstat）"><span class="nav-text">8.精简并保留必要的软件启动（如cron、network、sshd、rsyslog、sysstat）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-内核优化"><span class="nav-text">9.内核优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-更改系统字符集-为“zh-CN-UTF-8”-使其支持中文，防止出现乱码问题。"><span class="nav-text">10.更改系统字符集, 为“zh_CN.UTF-8”,使其支持中文，防止出现乱码问题。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-锁定关键文件-如-passwd、-etc-shadow-、-etc-group-、-etc-gshadow、-etc-inittab-处理以上内容后把chattr、lsattr、改名为root，转移走，这样就安全多了。"><span class="nav-text">11.锁定关键文件,如: passwd、/etc/shadow/、/etc/group/、/etc/gshadow、/etc/inittab,处理以上内容后把chattr、lsattr、改名为root，转移走，这样就安全多了。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-清空-etc-issue-etcissue-net-去除系统及内核版本登录前的屏幕显示"><span class="nav-text">12.清空/etc/issue /etcissue.net,去除系统及内核版本登录前的屏幕显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-禁止Linux系统被ping"><span class="nav-text">13.禁止Linux系统被ping</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1518,6 +694,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
