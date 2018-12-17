@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="阿里云,CentOS,系统优化," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Notes">
-<meta property="og:url" content="http://www.junwei.xin/archives/2018/05/index.html">
+<meta name="description" content="iptables firewalld     查看防火墙状态 service iptables status systemctl status firewalld/firewall-cmd –state   启动防火墙 service iptables start systemctl start firewalld   停止防火墙 service iptables stop systemc">
+<meta name="keywords" content="阿里云,CentOS,系统优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iptables&#x2F;firewalld的常用操作">
+<meta property="og:url" content="http://www.junwei.xin/2017/05/08/firewalld/index.html">
 <meta property="og:site_name" content="Notes">
+<meta property="og:description" content="iptables firewalld     查看防火墙状态 service iptables status systemctl status firewalld/firewall-cmd –state   启动防火墙 service iptables start systemctl start firewalld   停止防火墙 service iptables stop systemc">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-17T01:07:20.214Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Notes">
+<meta name="twitter:title" content="iptables&#x2F;firewalld的常用操作">
+<meta name="twitter:description" content="iptables firewalld     查看防火墙状态 service iptables status systemctl status firewalld/firewall-cmd –state   启动防火墙 service iptables start systemctl start firewalld   停止防火墙 service iptables stop systemc">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://www.junwei.xin/archives/2018/05/"/>
+  <link rel="canonical" href="http://www.junwei.xin/2017/05/08/firewalld/"/>
 
 
 
 
 
-  <title>归档 | Notes</title>
+  <title>iptables/firewalld的常用操作 | Notes</title>
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,185 +239,230 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.junwei.xin/2017/05/08/firewalld/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="junwei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/ossend.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Notes">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">iptables/firewalld的常用操作</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-08T18:49:00+08:00">
+                2017-05-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 9 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/27/zd/" itemprop="url">
-              
-                <span itemprop="name">Linux几种中断信号的区别</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-27T13:30:00+08:00"
-              content="2018-05-27" >
-          05-27
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/20/lnmp/" itemprop="url">
-              
-                <span itemprop="name">CentOS6搭建LNMP环境</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-20T13:30:00+08:00"
-              content="2018-05-20" >
-          05-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/15/lsyncd/" itemprop="url">
-              
-                <span itemprop="name">Lsyncd建立实时同步的镜像主机实验</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-15T15:49:00+08:00"
-              content="2018-05-15" >
-          05-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <table>
+<thead>
+<tr>
+<th></th>
+<th>iptables</th>
+<th>firewalld</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查看防火墙状态</td>
+<td>service iptables status</td>
+<td>systemctl status firewalld/firewall-cmd –state</td>
+</tr>
+<tr>
+<td>启动防火墙</td>
+<td>service iptables start</td>
+<td>systemctl start firewalld</td>
+</tr>
+<tr>
+<td>停止防火墙</td>
+<td>service iptables stop</td>
+<td>systemctl stop firewalld</td>
+</tr>
+<tr>
+<td>禁用防火墙</td>
+<td>chkconfig iptables off</td>
+<td>systemctl disable iptables</td>
+</tr>
+<tr>
+<td>重启防火墙</td>
+<td>service iptables restart</td>
+<td>firewall-cmd –reload</td>
+</tr>
+<tr>
+<td>查看规则</td>
+<td>iptables -L -n</td>
+<td>firewall-cmd –list-all</td>
+</tr>
+<tr>
+<td>开放端口</td>
+<td>iptables -I INPUT -p tcp –dport 22 -j ACCEPT</td>
+<td>firewall-cmd –permanent –add-port=80/tcp</td>
+</tr>
+<tr>
+<td>关闭端口</td>
+<td>iptables -I INPUT -p tcp –dport 22 -j DROP</td>
+<td>firewall-cmd –permanent –remove-port=80/tcp</td>
+</tr>
+<tr>
+<td>端口映射</td>
+<td>iptables -t nat -A PREROUTING -d 192.168.10.88 -p tcp –dport 80 -j DNAT –to-destination 192.168.10.88:8080</td>
+<td>firewall-cmd –add-forward-port=port=80:proto=tcp:toport=8080</td>
+</tr>
+<tr>
+<td>保存规则</td>
+<td>service iptables save</td>
+<td>–permanent</td>
+</tr>
+<tr>
+<td>清除规则</td>
+<td>iptables -F</td>
+<td>—–</td>
+</tr>
+<tr>
+<td>备份规则</td>
+<td>iptables-save &gt; /data/myipt.rule   #备份规则至/data/myipt.rule</td>
+<td>—–</td>
+</tr>
+<tr>
+<td>恢复规则</td>
+<td>iptables-restore &lt; /data/myipt.rule   #备份规则至/data/myipt.rule</td>
+<td>—–</td>
+</tr>
+</tbody>
+</table>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/09/Aliyun/" itemprop="url">
-              
-                <span itemprop="name">购买一台阿里云云主机（CentOS）后</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-09T18:49:00+08:00"
-              content="2018-05-09" >
-          05-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/阿里云/" rel="tag"># 阿里云</a>
+          
+            <a href="/tags/CentOS/" rel="tag"># CentOS</a>
+          
+            <a href="/tags/系统优化/" rel="tag"># 系统优化</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/16/mysqldeveloping/" rel="next" title="Mysql架构由小变大的演变过程">
+                <i class="fa fa-chevron-left"></i> Mysql架构由小变大的演变过程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/09/Aliyun/" rel="prev" title="购买一台阿里云云主机（CentOS）后">
+                购买一台阿里云云主机（CentOS）后 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -420,6 +470,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -460,7 +514,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -657,6 +711,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

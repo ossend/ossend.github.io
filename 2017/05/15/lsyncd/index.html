@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Mysql,网站架构," />
+  <meta name="keywords" content="Lsyncd,backup,备份," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="假设一个网站（discuz）从最开始访问量很小做到日pv千万，我们来推测一下它的mysql服务器架构演变过程。">
-<meta name="keywords" content="Mysql,网站架构">
+<meta name="description" content="Lysncd即Live Syncing Daemon，它是开源的数据实时同步工具(后台进程)，基于inotify和rsync。 Lsyncd会密切监测本地服务器上的参照目录，当发现目录下有文件或目录变更后，立刻通知远程服务器，并通过rsync 或rsync+ssh方式实现文件同步。这样做的好处就是，你可以利用Lsyncd搭建一个VPS同步镜像，应用场景例如CDN镜像、网站数据备份、网站搬家等等。">
+<meta name="keywords" content="Lsyncd,backup,备份">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mysql架构由小变大的演变过程">
-<meta property="og:url" content="http://www.junwei.xin/2018/04/16/mysqldeveloping/index.html">
+<meta property="og:title" content="Lsyncd建立实时同步的镜像主机实验">
+<meta property="og:url" content="http://www.junwei.xin/2017/05/15/lsyncd/index.html">
 <meta property="og:site_name" content="Notes">
-<meta property="og:description" content="假设一个网站（discuz）从最开始访问量很小做到日pv千万，我们来推测一下它的mysql服务器架构演变过程。">
+<meta property="og:description" content="Lysncd即Live Syncing Daemon，它是开源的数据实时同步工具(后台进程)，基于inotify和rsync。 Lsyncd会密切监测本地服务器上的参照目录，当发现目录下有文件或目录变更后，立刻通知远程服务器，并通过rsync 或rsync+ssh方式实现文件同步。这样做的好处就是，你可以利用Lsyncd搭建一个VPS同步镜像，应用场景例如CDN镜像、网站数据备份、网站搬家等等。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-16T03:13:48.143Z">
+<meta property="og:updated_time" content="2018-12-17T01:10:21.284Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mysql架构由小变大的演变过程">
-<meta name="twitter:description" content="假设一个网站（discuz）从最开始访问量很小做到日pv千万，我们来推测一下它的mysql服务器架构演变过程。">
+<meta name="twitter:title" content="Lsyncd建立实时同步的镜像主机实验">
+<meta name="twitter:description" content="Lysncd即Live Syncing Daemon，它是开源的数据实时同步工具(后台进程)，基于inotify和rsync。 Lsyncd会密切监测本地服务器上的参照目录，当发现目录下有文件或目录变更后，立刻通知远程服务器，并通过rsync 或rsync+ssh方式实现文件同步。这样做的好处就是，你可以利用Lsyncd搭建一个VPS同步镜像，应用场景例如CDN镜像、网站数据备份、网站搬家等等。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://www.junwei.xin/2018/04/16/mysqldeveloping/"/>
+  <link rel="canonical" href="http://www.junwei.xin/2017/05/15/lsyncd/"/>
 
 
 
 
 
-  <title>Mysql架构由小变大的演变过程 | Notes</title>
+  <title>Lsyncd建立实时同步的镜像主机实验 | Notes</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.junwei.xin/2018/04/16/mysqldeveloping/">
+    <link itemprop="mainEntityOfPage" href="http://www.junwei.xin/2017/05/15/lsyncd/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="junwei">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mysql架构由小变大的演变过程</h1>
+          <h1 class="post-title" itemprop="name headline">Lsyncd建立实时同步的镜像主机实验</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-16T10:01:29+08:00">
-                2018-04-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-15T15:49:00+08:00">
+                2017-05-15
               </time>
             
 
@@ -320,15 +320,23 @@
       
 
       
-        <blockquote>
-<p>假设一个网站（discuz）从最开始访问量很小做到日pv千万，我们来推测一下它的mysql服务器架构演变过程。<br><a id="more"></a></p>
+        <p>Lysncd即Live Syncing Daemon，它是开源的数据实时同步工具(后台进程)，基于inotify和rsync。</p>
+<p>Lsyncd会密切监测本地服务器上的参照目录，当发现目录下有文件或目录变更后，立刻通知远程服务器，并通过rsync 或rsync+ssh方式实现文件同步。这样做的好处就是，你可以利用Lsyncd搭建一个VPS同步镜像，应用场景例如CDN镜像、网站数据备份、网站搬家等等。<br><a id="more"></a></p>
+<h3 id="实验环境"><a href="#实验环境" class="headerlink" title="实验环境"></a>实验环境</h3><blockquote>
+<p>源主机 T801<br> 操作系统：CentOS6.9<br> IP地址：192.168.2.81<br> 镜像主机T802<br> 操作系统：CentOS6.9<br>IP地址：192.168.2.82</p>
 </blockquote>
-<h3 id="第一阶段"><a href="#第一阶段" class="headerlink" title="第一阶段"></a>第一阶段</h3><p>网站访问量日pv量级在1w以下。单台机器跑web和db，不需要做架构层调优（比如，不需要增加memcached缓存）。此时，数据往往都是每日冷备份的，但有时候如果考虑数据安全性，会搭建一个mysql主从。</p>
-<h3 id="第二阶段"><a href="#第二阶段" class="headerlink" title="第二阶段"></a>第二阶段</h3><p>网站访问量日pv达到几万。此时单台机器已经有点负载，需要我们把web和db分开，需要搭建memcached服务作为缓存。也就是说，在这个阶段，我们还可以使用单台机器跑mysql去承担整个网站的数据存储和查询。如果做mysql主从，目的也是为了数据安全性。</p>
-<h3 id="第三阶段"><a href="#第三阶段" class="headerlink" title="第三阶段"></a>第三阶段</h3><p>网站访问量日pv达到几十万。单台机器虽然也可以支撑，但是需要的机器配置要比之前的机器好很多。如果经费允许，可以购买配置很高的机器来跑mysql服务，但是并不是说，配置翻倍，性能也翻倍，到了一定阶段配置增加已经不能带来性能的增加。所以，此阶段，我们会想到做mysql服务的集群，也就是说我们可以拿多台机器跑mysql。但，mysql的集群和web集群是不一样的，我们需要考虑数据的一致性，所以不能简单套用做web集群的方式（lvs，nginx代理）。可以做的架构是，mysql主从，一主多从。为了保证架构的健壮和数据完整，主只能是一个，从可以是多个。<br>还有一个问题，我们需要想到，就是在前端web层，我们的程序里面指定了mysql机器的ip，那么当mysql机器有多台时，程序里面如何去配置？discuz，其实有一个功能，支持mysql读写分离。即，我们可以拿多台机器跑mysql，其中一台写，其他多台是读，我们只需要把读和写的ip分别配置到程序中，程序自动会去区分机器。当然，如果不使用discuz自带的配置，我们还可以引用一个软件叫做 mysql-proxy, 使用他来实现读写分离。它支持一主多从的模式。</p>
-<h3 id="第四阶段"><a href="#第四阶段" class="headerlink" title="第四阶段"></a>第四阶段</h3><p>网站访问量日pv到几百万。之前的一主多从模式已经遇到瓶颈，因为当网站访问量变大，读数据库的量也会越来越大，我们需要多加一些从进来，但是从的数量增加到数十台时，由于主需要把bin-log全部分发到所有从上，那么这个过程本身就是一件很繁琐的事情，再加上频繁读取，势必会造成从上同步过来的数据有很大延迟。所以，我们可以做一个优化，把mysql原来的一主多从变为一主一从，然后从作为其他从的主，而前面的主只负责网站业务的写入，而后面的从不负责网站任何业务，只负责给其他从同步bin-log。这样还可以继续多叠加几个从库。</p>
-<h3 id="第五阶段"><a href="#第五阶段" class="headerlink" title="第五阶段"></a>第五阶段</h3><p>网站访问量日pv到1千万的时候，我们发现，网站的写入量非常大，我们之前架构中只有一个主，这里的主已经成为瓶颈了。所以，需要再近一步做出调整。比如，我们可以把业务分模块，把用户相关的单独分离出来，把权限、积分等也可以分离出来单独跑一个库，然后再做主从，也就是所谓的分库。当然也可以换一个纬度，把访问量或者写入量大的表单独分离出来，跑在一台服务器上，也可以把一个表分成多个小表。这一步操作，涉及到一些程序上的改动，所以需要事先和开发同事做好沟通和设计。总之，这一步要做的就是分库分表。</p>
-<p>再往后发展，继续把大表分小表即可。 而国内阿里淘宝网站的数据量是巨量的，他们的数据库全部都是mysql，他们的mysql架构就是遵循分库分表这个原则的，只不过他们划分规则会有很多纬度，比如可以根据地域划分，可以根据买家、卖家划分，可以根据时间划分等等。</p>
+<hr>
+<h3 id="安装Lsyncd先要添加epel源"><a href="#安装Lsyncd先要添加epel源" class="headerlink" title="安装Lsyncd先要添加epel源"></a>安装Lsyncd先要添加epel源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -P /etc/yum.repos.d/ http://mirrors.aliyun.com/repo/epel-6.repo</span><br><span class="line">yum install -y lsyncd</span><br></pre></td></tr></table></figure>
+<h3 id="在源主机创建密钥并copy至镜像主机实现免密登陆"><a href="#在源主机创建密钥并copy至镜像主机实现免密登陆" class="headerlink" title="在源主机创建密钥并copy至镜像主机实现免密登陆"></a>在源主机创建密钥并copy至镜像主机实现免密登陆</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br><span class="line">ssh-copy-id root@192.168.2.82</span><br></pre></td></tr></table></figure>
+<h3 id="设置配置文件"><a href="#设置配置文件" class="headerlink" title="设置配置文件"></a>设置配置文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/lsyncd.conf</span><br></pre></td></tr></table></figure>
+<p>在<code>lsyncd.conf</code>中写入如下配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">settings = &#123;</span><br><span class="line">    insist = true,</span><br><span class="line">    logfile = &quot;/var/log/lsyncd/lsyncd.log&quot;,</span><br><span class="line">    statusFile = &quot;/var/log/lsyncd/lsyncd.status&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sync &#123;</span><br><span class="line">    default.rsyncssh,</span><br><span class="line">    source = &quot;/data/www&quot;,</span><br><span class="line">    host = &quot;192.168.2.82&quot;,</span><br><span class="line">    targetdir = &quot;/data/www&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="源主机创建相关文件"><a href="#源主机创建相关文件" class="headerlink" title="源主机创建相关文件"></a>源主机创建相关文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /var/log/lsyncd</span><br><span class="line">touch /var/log/lsyncd/lsyncd.&#123;log,status&#125;</span><br><span class="line">mkdir /data/www</span><br></pre></td></tr></table></figure>
+<h3 id="镜像主机创建同步目录"><a href="#镜像主机创建同步目录" class="headerlink" title="镜像主机创建同步目录"></a>镜像主机创建同步目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /data/www</span><br></pre></td></tr></table></figure>
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service lsyncd start</span><br></pre></td></tr></table></figure>
+<h3 id="源主机创建文件测试"><a href="#源主机创建文件测试" class="headerlink" title="源主机创建文件测试"></a>源主机创建文件测试</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">touch /data/www/&#123;a,b,c,d,e&#125;</span><br><span class="line">ll /data/www/</span><br></pre></td></tr></table></figure>
+<h3 id="镜像主机查看"><a href="#镜像主机查看" class="headerlink" title="镜像主机查看"></a>镜像主机查看</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll /data/www/</span><br></pre></td></tr></table></figure>
+<p>附：rsync拷贝命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rsync -avzP -e ssh root@118.89.29.29:/data/www/* /data/www/</span><br><span class="line">##快速拷贝远程服务器文件</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -346,9 +354,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Mysql/" rel="tag"># Mysql</a>
+            <a href="/tags/Lsyncd/" rel="tag"># Lsyncd</a>
           
-            <a href="/tags/网站架构/" rel="tag"># 网站架构</a>
+            <a href="/tags/backup/" rel="tag"># backup</a>
+          
+            <a href="/tags/备份/" rel="tag"># 备份</a>
           
         </div>
       
@@ -361,8 +371,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/16/webdeveloping/" rel="next" title="网站业务架构演变过程">
-                <i class="fa fa-chevron-left"></i> 网站业务架构演变过程
+              <a href="/2017/05/09/Aliyun/" rel="next" title="购买一台阿里云云主机（CentOS）后">
+                <i class="fa fa-chevron-left"></i> 购买一台阿里云云主机（CentOS）后
               </a>
             
           </div>
@@ -371,8 +381,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/09/Aliyun/" rel="prev" title="购买一台阿里云云主机（CentOS）后">
-                购买一台阿里云云主机（CentOS）后 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/20/lnmp/" rel="prev" title="CentOS6搭建LNMP环境">
+                CentOS6搭建LNMP环境 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -454,7 +464,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -516,7 +526,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一阶段"><span class="nav-text">第一阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二阶段"><span class="nav-text">第二阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三阶段"><span class="nav-text">第三阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四阶段"><span class="nav-text">第四阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第五阶段"><span class="nav-text">第五阶段</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#实验环境"><span class="nav-text">实验环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Lsyncd先要添加epel源"><span class="nav-text">安装Lsyncd先要添加epel源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在源主机创建密钥并copy至镜像主机实现免密登陆"><span class="nav-text">在源主机创建密钥并copy至镜像主机实现免密登陆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置配置文件"><span class="nav-text">设置配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源主机创建相关文件"><span class="nav-text">源主机创建相关文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#镜像主机创建同步目录"><span class="nav-text">镜像主机创建同步目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动服务"><span class="nav-text">启动服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源主机创建文件测试"><span class="nav-text">源主机创建文件测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#镜像主机查看"><span class="nav-text">镜像主机查看</span></a></li></ol></div>
             
 
           </div>
