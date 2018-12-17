@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="iptables firewalld     查看防火墙状态 service iptables status systemctl status firewalld/firewall-cmd –state   启动防火墙 service iptables start systemctl start firewalld   停止防火墙 service iptables stop system">
+<meta name="description" content="……">
 <meta name="keywords" content="iptables,firewalld,防火墙,命令">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iptables&#x2F;firewalld的常用操作">
 <meta property="og:url" content="http://www.junwei.xin/2017/05/08/firewalld/index.html">
 <meta property="og:site_name" content="Notes">
-<meta property="og:description" content="iptables firewalld     查看防火墙状态 service iptables status systemctl status firewalld/firewall-cmd –state   启动防火墙 service iptables start systemctl start firewalld   停止防火墙 service iptables stop system">
+<meta property="og:description" content="……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-17T01:23:21.385Z">
+<meta property="og:updated_time" content="2018-12-17T01:27:11.999Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iptables&#x2F;firewalld的常用操作">
-<meta name="twitter:description" content="iptables firewalld     查看防火墙状态 service iptables status systemctl status firewalld/firewall-cmd –state   启动防火墙 service iptables start systemctl start firewalld   停止防火墙 service iptables stop system">
+<meta name="twitter:description" content="……">
 
 
 
@@ -320,83 +320,7 @@
       
 
       
-        <a id="more"></a>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>iptables</th>
-<th>firewalld</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>查看防火墙状态</td>
-<td>service iptables status</td>
-<td>systemctl status firewalld/firewall-cmd –state</td>
-</tr>
-<tr>
-<td>启动防火墙</td>
-<td>service iptables start</td>
-<td>systemctl start firewalld</td>
-</tr>
-<tr>
-<td>停止防火墙</td>
-<td>service iptables stop</td>
-<td>systemctl stop firewalld</td>
-</tr>
-<tr>
-<td>禁用防火墙</td>
-<td>chkconfig iptables off</td>
-<td>systemctl disable iptables</td>
-</tr>
-<tr>
-<td>重启防火墙</td>
-<td>service iptables restart</td>
-<td>firewall-cmd –reload</td>
-</tr>
-<tr>
-<td>查看规则</td>
-<td>iptables -L -n</td>
-<td>firewall-cmd –list-all</td>
-</tr>
-<tr>
-<td>开放端口</td>
-<td>iptables -I INPUT -p tcp –dport 22 -j ACCEPT</td>
-<td>firewall-cmd –permanent –add-port=80/tcp</td>
-</tr>
-<tr>
-<td>关闭端口</td>
-<td>iptables -I INPUT -p tcp –dport 22 -j DROP</td>
-<td>firewall-cmd –permanent –remove-port=80/tcp</td>
-</tr>
-<tr>
-<td>端口映射</td>
-<td>iptables -t nat -A PREROUTING -d 192.168.10.88 -p tcp –dport 80 -j DNAT –to-destination 192.168.10.88:8080</td>
-<td>firewall-cmd –add-forward-port=port=80:proto=tcp:toport=8080</td>
-</tr>
-<tr>
-<td>保存规则</td>
-<td>service iptables save</td>
-<td>–permanent</td>
-</tr>
-<tr>
-<td>清除规则</td>
-<td>iptables -F</td>
-<td>—–</td>
-</tr>
-<tr>
-<td>备份规则</td>
-<td>iptables-save &gt; /data/myipt.rule   #备份规则至/data/myipt.rule</td>
-<td>—–</td>
-</tr>
-<tr>
-<td>恢复规则</td>
-<td>iptables-restore &lt; /data/myipt.rule   #备份规则至/data/myipt.rule</td>
-<td>—–</td>
-</tr>
-</tbody>
-</table>
+        <p>……<br><a id="more"></a><br>|  |iptables  |firewalld  |<br>|–|–|–|<br>|查看防火墙状态  | service iptables status |systemctl status firewalld/firewall-cmd –state  |<br>|启动防火墙  |service iptables start  |systemctl start firewalld  |<br>| 停止防火墙 |service iptables stop  |systemctl stop firewalld  |<br>| 禁用防火墙 |chkconfig iptables off  |systemctl disable iptables  |<br>| 重启防火墙 |service iptables restart  |firewall-cmd –reload  |<br>| 查看规则 |iptables -L -n |firewall-cmd –list-all  |<br>| 开放端口 |iptables -I INPUT -p tcp –dport 22 -j ACCEPT |firewall-cmd –permanent –add-port=80/tcp  |<br>| 关闭端口 |iptables -I INPUT -p tcp –dport 22 -j DROP   |firewall-cmd –permanent –remove-port=80/tcp  |<br>| 端口映射 |iptables -t nat -A PREROUTING -d 192.168.10.88 -p tcp –dport 80 -j DNAT –to-destination 192.168.10.88:8080   |firewall-cmd –add-forward-port=port=80:proto=tcp:toport=8080   |<br>| 保存规则 |service iptables save  |–permanent  |<br>| 清除规则 |iptables -F  |—–  |<br>| 备份规则 |iptables-save &gt; /data/myipt.rule   #备份规则至/data/myipt.rule  |—–  |<br>| 恢复规则 |iptables-restore &lt; /data/myipt.rule   #备份规则至/data/myipt.rule  |—–  |</p>
 
       
     </div>
